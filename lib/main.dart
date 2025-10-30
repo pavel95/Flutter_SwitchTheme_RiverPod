@@ -62,7 +62,7 @@ class DarkModeSwitch extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final appThemeState = ref.watch(appThemeStateNotifier);
     return Switch(
-      value: false,
+      value: appThemeState.isDarkModeEnabled,
       onChanged: (enabled) {
         if (enabled) {
           appThemeState.setDarkTheme();
